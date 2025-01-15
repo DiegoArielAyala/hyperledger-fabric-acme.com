@@ -3,7 +3,8 @@
 # Date: 20-08-2020
 # SPDX-License-Identifier: Apache-2.0
 #
-version: '2'
+
+# version: '2' # atributo obsoleto
 
 # ---CHANGED--- our network is called "basic"
 networks:
