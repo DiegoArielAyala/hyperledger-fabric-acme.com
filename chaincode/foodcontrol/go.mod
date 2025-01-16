@@ -1,6 +1,8 @@
 // Defino como voy a usar este proyecto como modulo y cuales son las versiones de los modulos que estoy usando dentro de este proyecto
 module github.com/DiegoArielAyala/hyperledger-fabric-acme.com/blob/main/chaincode/foodcontrol
 
+//Posible correccion de error: module github.com/DiegoArielAyala/hyperledger-fabric-acme
+
 go 1.23
 
 require github.com/hyperledger/fabric-contract-api-go v1.2.2

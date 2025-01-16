@@ -25,13 +25,13 @@ type Food struct {
 
 // Funcion para guardar en la blockchain
 func (s *SmartContract) Set(ctx contractapi.TransactionContextInterface, foodId string, farmer string, variety string) error { // Indico que la funcion sea parte de la estructura de SmartContract. Defino propiedades que van a ser parte de la data que envia el cliente al momento de ejecutar el contrato. La funcion solo va a devolver un error
-	
+
 	// Normalmente se realizan validaciones de sintaxis (que los elementos que se reciben no sean nulos por ejemplo), de negocio, etc.
-	food, err := s.Query(ctx, foodId) //ctx es del contractapi
-	if food != nil { //Si food no es nil, el asset ya existe
-		fmt.Printf("foodId already existe error: %s", err.Error())
-		return err
-	}
+	// food, err := s.Query(ctx, foodId) //ctx es del contractapi
+	// if food != nil { //Si food no es nil, el asset ya existe
+	// 	fmt.Printf("foodId already existe error: %s", err.Error())
+	// 	return err
+	// }
 
 	food := Food{ // Creo una estructura tipo Food
 		Farmer:  farmer,
