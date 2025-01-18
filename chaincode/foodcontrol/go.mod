@@ -5,7 +5,7 @@ module github.com/DiegoArielAyala/hyperledger-fabric-acme.com/blob/main/chaincod
 
 go 1.23
 
-require github.com/hyperledger/fabric-contract-api-go v1.2.2
+require github.com/hyperledger/fabric-contract-api-go v1.0.0
 
 require (
 	github.com/go-openapi/jsonpointer v0.20.0 // indirect

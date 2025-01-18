@@ -39,7 +39,12 @@ func (s *SmartContract) Set(ctx contractapi.TransactionContextInterface, foodId 
 	} // Esta estructura es un objeto binario que se puede transformar en json
 	// Con contractapi tenemos un objeto llamado GetStub y una funcion PutState, que permite guardar en la blockchain, y necesita una Clave y un Valor
 
-	foodAsBytes, _ := json.Marshal(food) // La barra baja _ es una variable no existente. Transformo el elemento food a bytes
+	// foodAsBytes, _ := json.Marshal(food) // La barra baja _ es una variable no existente. Transformo el elemento food a bytes
+	foodAsBytes, err := json.Marshal(food)
+	if err != nil {
+		fmt.Printf("Marshal error: %s", err.Error())
+		return err
+	}
 
 	return ctx.GetStub().PutState(foodId, foodAsBytes)
 
